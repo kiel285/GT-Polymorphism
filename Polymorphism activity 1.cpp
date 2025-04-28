@@ -1,13 +1,10 @@
 #include <iostream>
 using namespace std;
 
-class Number {
+class Calculator {
     public:
         int num;
-        int a;
-        int b;
-
-        
+        float fnum;
         void add(int a, int b) {
             num = a + b;
             cout << "Sum of integers: " << num << endl;
@@ -17,8 +14,8 @@ class Number {
             cout << "Sum of integers: " << num << endl;
         }
         void add(float a, float b) {
-            num = a + b;
-            cout << "Sum of integers: " << num << endl;
+            fnum = a + b;
+            cout << "Sum of integers: " << fnum << endl;
         }
         void subtract(int a, int b) {
             num = a - b;
@@ -29,15 +26,15 @@ class Number {
             cout << "product of integers: " << num << endl;
         }
         void divide(float a, float b) {
-            if(b!=0){num = a/b;
-            cout << "quotient of integers: " << num << endl;
+            if(b!=0){fnum = a/b;
+            cout << "quotient of integers: " << fnum << endl;
         }else{cout<<"Cannot divide by 0"<<endl;}
         }
        
 };
 
 int main() {
-    Number j1;
+    Calculator j1;
     int a,b,c;
     int select;
     cout<<"===Simple Calculator==="<<endl;
@@ -63,8 +60,8 @@ int main() {
         break;
         case 3:
         cout<<"Enter two integers: ";
-        float a,b;
-        cin>>a>>b;
+        float fa,fb;
+        cin>>fa>>fb;
         j1.add(a,b);
         break;
         case 4:
@@ -79,8 +76,8 @@ int main() {
         break;
         case 6:
         cout<<"Enter two integers: ";
-        cin>>a>>b;
-        j1.divide(a,b);
+        cin>>fa>>fb;
+        j1.divide(fa,fb);
         break;
         default:
         cout<<"Wrong input, Terminating";
