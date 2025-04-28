@@ -63,6 +63,7 @@ int main() {
         break;
         case 3:
         cout<<"Enter two integers: ";
+        float a,b;
         cin>>a>>b;
         j1.add(a,b);
         break;
